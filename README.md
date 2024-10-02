@@ -1,15 +1,15 @@
-# Orb Template
+# Bash-Logger Orb
 
 
 [![CircleCI Build Status](https://circleci.com/gh/felixshiftellecon/bash-logger-orb.svg?style=shield "CircleCI Build Status")](https://circleci.com/gh/felixshiftellecon/bash-logger-orb) [![CircleCI Orb Version](https://badges.circleci.com/orbs/felixshiftellecon/bash-logger.svg)](https://circleci.com/developer/orbs/orb/felixshiftellecon/bash-logger) [![GitHub License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/felixshiftellecon/bash-logger-orb/master/LICENSE) [![CircleCI Community](https://img.shields.io/badge/community-CircleCI%20Discuss-343434.svg)](https://discuss.circleci.com/c/ecosystem/orbs)
 
+This orb adds a command to log bash commands and outputs of those commands in steps.
 
+*Note:*
 
-A project template for Orbs.
-
-This repository is designed to be automatically ingested and modified by the CircleCI CLI's `orb init` command.
-
-_**Edit this area to include a custom title and description.**_
+- This only works with steps that are Bash commands.
+- It will not work with CircleCI commands.
+- To use this with orbs, it will need to be baked into the orb itself rather that called from the project's config.
 
 ---
 

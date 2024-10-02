@@ -1,0 +1,5 @@
+description: >
+  This command stores the build logs as artifacts.
+steps:
+  - store_artifacts:
+      path: /tmp/logs/build_output.txt

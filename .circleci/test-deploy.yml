@@ -28,7 +28,9 @@ jobs:
     steps:
       - checkout
       # Run your orb's commands to validate them.
-      - bash-logger/greet
+      - bash-logger/run_and_log:
+            cmd: echo "Running job a"
+      - bash-logger/store_build_logs
 workflows:
   test-deploy:
     jobs:

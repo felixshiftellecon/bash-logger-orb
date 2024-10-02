@@ -1,0 +1,12 @@
+description: >
+  This command runs a provided command and logs its output. This only works for jobs using Bash.
+parameters:
+  cmd:
+    type: string
+    description: "The command to run and log."
+steps:
+  - run:
+      environment:
+        PARAM_CMD: <<parameters.cmd>>
+      name: Run and Log Command
+      command: <<include(scripts/run_and_log.sh)>>
