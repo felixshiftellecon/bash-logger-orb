@@ -1,0 +1,15 @@
+description: >
+  This command runs a provided command and logs its output. This only works for jobs using Bash.
+parameters:
+  cmd:
+    type: string
+    description: "The command to run and log."
+steps:
+  - run:
+      name: Run and Log Command
+      command: |
+        set -x
+        mkdir -p /tmp/logs/
+        echo "----------------------------------------" | tee -a /tmp/logs/build_output.txt
+        echo "<< parameters.cmd >>" | tee -a /tmp/logs/build_output.txt
+        eval "<< parameters.cmd >>" | tee -a /tmp/logs/build_output.txt
