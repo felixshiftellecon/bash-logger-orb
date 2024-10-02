@@ -6,5 +6,7 @@ parameters:
     description: "The command to run and log."
 steps:
   - run:
+      environment:
+        PARAM_CMD: <<parameters.cmd>>
       name: Run and Log Command
-      command: <<include(scripts/run_and_log.sh)>> "<< parameters.cmd >>"
+      command: <<include(scripts/run_and_log.sh)>>

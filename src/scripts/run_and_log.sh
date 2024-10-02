@@ -2,5 +2,5 @@
 set -x
 mkdir -p /tmp/logs/
 echo "----------------------------------------" | tee -a /tmp/logs/build_output.txt
-echo "$1" | tee -a /tmp/logs/build_output.txt
-eval "$1" | tee -a /tmp/logs/build_output.txt
+echo "${PARAM_CMD}" | tee -a /tmp/logs/build_output.txt
+eval "${PARAM_CMD}" | tee -a /tmp/logs/build_output.txt
