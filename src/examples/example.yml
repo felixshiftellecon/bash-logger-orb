@@ -16,9 +16,9 @@ usage:
       executor: felixshiftellecon/base
       steps:
         - checkout
-        - run_and_log:
+        - bash-logger/run_and_log:
             cmd: echo "Running job a"
-        - store_build_logs
+        - bash-logger/store_build_logs
   workflows:
     use-my-orb:
       jobs:
