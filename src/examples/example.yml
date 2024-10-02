@@ -2,7 +2,7 @@ description: >
   Example of how to log and store the command and output of bash steps.
   Note: This only works with steps that are Bash commands.
   It will not work with CircleCI commands.
-  To use this with orbs, it will need to be baked into the orb itself 
+  To use this with orbs, it will need to be baked into the orb itself
   rather that called from the project's config.
 # Provide a use-case based example for using this orb.
 # Everything in the `usage` section will be displayed in the orb registry.
@@ -18,7 +18,7 @@ usage:
         - checkout
         - run_and_log:
             cmd: echo "Running job a"
-        - store_build_logs 
+        - store_build_logs
   workflows:
     use-my-orb:
       jobs:

@@ -7,9 +7,4 @@ parameters:
 steps:
   - run:
       name: Run and Log Command
-      command: |
-        set -x
-        mkdir -p /tmp/logs/
-        echo "----------------------------------------" | tee -a /tmp/logs/build_output.txt
-        echo "<< parameters.cmd >>" | tee -a /tmp/logs/build_output.txt
-        eval "<< parameters.cmd >>" | tee -a /tmp/logs/build_output.txt
+      command: <<include(scripts/run_and_log.sh)>> "<< parameters.cmd >>"
